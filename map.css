@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #c4e5d2;
+    padding: 20px;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: url('assets/bgmap1.jpg') no-repeat center center;
+    
+   
+}
+
+h1 {
+    font-size: 20px;
+    color: #333;
+    
+}
+
+p {
+    font-size: 16px;
+    color: #0e0d0d;
+}
+
+.face-map {
+    position: relative;
+    display: inline-block;
+}
+
+.clickable {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(77, 77, 78, 0.8);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clickable:hover {
+    background-color: rgba(131, 212, 77, 0.9);
+}
+
+.message-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(209, 230, 215);
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 300px;
+}
+
+.message-box h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.message-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.message-box button {
+    background-color: #436354;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-box button:hover {
+    background-color: #e01b1b;
+}

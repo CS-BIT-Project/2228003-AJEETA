@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: url('assets/bg.daynyt.jpg') no-repeat center center/cover;
+
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive;
+}
+
+h2 {
+    font-size: 20px;
+    color: gray;
+}
+
+.routine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.section {
+    width: 35%;
+    text-align: center;
+}
+
+.section img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.step:hover,
+.step:active,
+.step.active {
+    background: rgb(128, 185, 94);
+}
+
+p {
+    font-size: 16px;
+    color: #080707;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Routine</title>
+    <link rel="stylesheet" href="daynight.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h2>STEP BY STEP</h2>
+        <h1 class="title">Skincare Routines</h1>
+
+        <div class="routine">
+            <!-- AM Routine -->
+            <div class="section">
+                <h3>AM🌞</h3>
+                <img id="am-image" src="assets/din.jpg" alt="AM Product">
+                <h4 id="am-heading" class="step-heading">Morning routine</h4> <!-- Dynamic Heading -->
+                <p id="am-text">Click on a step to see details</p>
+            </p>
+            </div>
+
+            <!-- Step Numbers -->
+            <div class="center">
+                <button class="step" onclick="showStep(1)">1</button>
+                <button class="step" onclick="showStep(2)">2</button>
+                <button class="step" onclick="showStep(3)">3</button>
+                <button class="step" onclick="showStep(4)">4</button>
+                <button class="step" onclick="showStep(5)">5</button>
+            </div>
+
+            <!-- PM Routine -->
+            <div class="section">
+                <h3>PM🌙</h3>
+                <img id="pm-image" src="assets/raat.jpg" alt="PM Product">
+                <h4 id="pm-heading" class="step-heading">Night routine</h4> <!-- Dynamic Heading -->
+                <p id="pm-text">Click on a step to see details</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="daynight.js"></script>
+</body>
+</html>

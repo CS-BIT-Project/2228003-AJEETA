@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acne Face Map</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Heading Section -->
+        <h1>🫧 Acne Face Map: What Your Breakouts Are Telling You!</h1>
+        <p>
+            Ever wondered <strong>why your pimples keep popping up in the same spots?</strong> 🤔 
+            Your face is like a map, and breakouts can reveal what's happening inside your body! 
+            Let’s decode the <strong>Acne Face Map</strong> and uncover the hidden causes behind those stubborn breakouts.
+        </p>
+
+        <!-- Face Map Image -->
+        <div class="face-map">
+            <img src="assets/face1.jpg" alt="Face Map" width="300" height="350">
+
+            <!-- Clickable Buttons for Acne Regions -->
+            <button class="clickable" style="top: 120px; left: 143px;" onclick="showMessage(1)">1</button>
+            <button class="clickable" style="top: 220px; left: 70px;" onclick="showMessage(2)">2</button>
+            <button class="clickable" style="top: 220px; left: 210px;" onclick="showMessage(2)">2</button>
+            <button class="clickable" style="top: 200px; left: 142px;" onclick="showMessage(3)">3</button>
+            <button class="clickable" style="top: 280px; left: 140px;" onclick="showMessage(4)">4</button>
+            <button class="clickable" style="top: 310px; left: 140px;" onclick="showMessage(5)">5</button>
+        </div>
+    </div>
+
+    <!-- Message Box -->
+    <div id="messageBox" class="message-box">
+        <h2 id="messageTitle"></h2>
+        <p id="messageText"></p>
+        <button onclick="closeMessage()">Close</button>
+    </div>
+
+    <script src="map.js"></script>
+</body>
+</html>
