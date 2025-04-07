@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care Routines</title>
+    <link rel="stylesheet" href="routines.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo1.png" alt="Your skincare logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="routines.html">Skincare Routines</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="review.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="container">
+        <img src="assets/routinelogo.png" alt="Skincare Image" class="header-image">    
+        <h1>15 MINUTES AFTER WASHING YOUR FACE</h1>
+
+        <!-- First Question -->
+        <div id="step1" class="box">
+            <p>Do you notice your skin looks shiny while feeling greasy?</p>
+            <button onclick="showStep('step2a', 'step1')">YES</button>
+            <button onclick="showStep('step2b', 'step1')">NO</button>
+        </div>
+
+        <!-- If YES - Step 2A -->
+        <div id="step2a" class="box hidden">
+            <p>Does your entire face feel greasy?</p>
+            <button onclick="showResult('Oily Skin', 'assets/oily.jpg')">YES</button>
+            <button onclick="showResult('Combination Skin', 'assets/combination.jpg')">NO</button>
+        <br>
+            <button class="back-btn" onclick="goBack('step1', 'step2a')">Back</button>
+        </div>
+
+        <!-- If NO - Step 2B -->
+        <div id="step2b" class="box hidden">
+            <p>Do you feel tight and flaky?</p>
+            <button onclick="showResult('Dry Skin', 'assets/dry.jpg')">YES</button>
+            <button onclick="showResult('Normal Skin', 'assets/normal.jpg')">NO</button>
+           <br> <button class="back-btn" onclick="goBack('step1', 'step2b')">Back</button>
+        </div>
+
+        <!-- Final Result -->
+        <div id="result" class="hidden">
+            <h2>Your Skin Type: <span id="skinType"></span></h2>
+            <img id="skinImage" src="assets/oily.jpg" alt="Skin Type Image" class="hidden1">
+            <br><button class="back-btn" onclick="goBack('step1', 'result')">Restart</button>
+        </div>
+    </div>
+
+    <script src="skintype.js"></script>
+
+    <section class="skin-type-section">
+        <!-- <h1>Why Skincare is Essential? </h1>
+        <p>Your skin is your body's largest organ and deserves the best care! A consistent skincare routine keeps your
+            skin healthy, glowing, and protected from daily stressors like pollution and UV rays. It helps prevent
+            breakouts, dryness, and premature aging while boosting confidence and overall well-being.
+
+            Investing in skincare isn’t just about beauty—it’s about self-care and long-term health. Nourish your skin
+            today for a radiant and youthful tomorrow! Get your personalised skin care routines based on your skin type
+        </p> -->
+        <h2>Click on your your skin type in the image to get personalised skin care routine</h2>
+        <div class="image-section">
+            <img src="assets/skin_types.png" alt="Skin Types Image" usemap="#skinTypesMap">
+            <map name="skinTypesMap">
+                <area shape="rect" coords="0,0,230,200" href="https://youtu.be/U_ckjR-vnJA" alt="Oily Skin">
+                <area shape="rect" coords="250,0,400,200" href=https://youtu.be/ZVDLMaJJk3k alt="Combination Skin">
+                <area shape="rect" coords="400,0,900,200" href="https://youtu.be/4y5I0HDyYHs?si=lYma9LvMSAHmqK5L"
+                    alt="Dry Skin">
+            </map>
+        </div>
+        
+        <section class="content1">
+            <h2>Discover the Best Skincare Tips</h2>
+            <p>Learn how to keep your skin glowing and healthy with our expert advice.</p>
+        </section>
+    
+        <div class="quote-section1">
+            <p class="quote">"Feed your skin the care it craves!"</p>
+        </div>
+    
+        <div class="buttons-container1">
+            <button class="image-button1" onclick="showMessage1('Cleansing')">
+                <img src="cleansing.jpg" alt="Cleansing">
+                <span>Cleansing</span>
+            </button>
+            <button class="image-button1" onclick="showMessage2('Moisturizing')">
+                <img src="moisturizing.jpg" alt="Moisturizing">
+                <span>Moisturizing</span>
+            </button>
+            <button class="image-button1" onclick="showMessage3('Sun Protection')">
+                <img src="sun-protection.jpg" alt="Sun Protection">
+                <span>Sun Protection</span>
+            </button>
+        </div>
+    
+        <script src="script.js"></script>
+    
+        <!-- <div class="content">
+            <div class="video-container">
+                <h3>Having a normal skin?Click on this video to get your personalised skin routine!</h3>
+                <video width="560" height="315" controls>
+                    <source src="C:\Users\Lenovo\Documents\programming\html_project\assets\video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> -->
+
+            <!-- <p>Understanding your skin type and following a skincare routine tailored to your specific skin needs is
+                crucial for several reasons:</p>
+            <ul>
+                <li>Effective Skincare:</br>Different skin types have unique characteristics and needs. Knowing your
+                    skin type allows you to choose and use products that are specifically formulated to address those
+                    needs, leading to more effective results.</li>
+                <li>Prevention of Skin Issues:</br>Tailoring your skincare routine to your skin type helps in preventing
+                    various skin issues. For example, using products suitable for oily skin can help control excess oil
+                    production, reducing the likelihood of acne and breakouts.</li>
+                <li>Optimal Hydration:</br>Dry skin requires more hydration, and using moisturizers with ingredients
+                    suitable for dry skin helps maintain optimal moisture levels. On the other hand, using heavy
+                    moisturizers on oily skin can lead to clogged pores.</li>
+                <li>Targeted Treatment:</br>Knowing your skin type allows you to address specific concerns. For
+                    instance, if you have sensitive skin, you can avoid products with harsh ingredients that may cause
+                    irritation.</li>
+                <li>Achieving Healthy Skin:</br>A personalized skincare routine contributes to overall skin health. It
+                    can promote a clearer complexion, even skin tone, and a smoother texture.</li>
+            </ul> -->
+
+        </div>
+    </section>
+
+    <!-- <div class="skin-type-container">
+        <h1>Know Your Face: <br> The Skin Type</h1>
+        
+        <div class="skin-type">
+            <img src="assets/normal.jpg" alt="Normal Skin">
+            <h2>Normal Skin</h2>
+            <p>Well-balanced, radiant complexion, smooth texture, no imperfections.</p>
+        </div>
+
+        <div class="skin-type">
+            <img src="assets/dry.jpg" alt="Dry Skin">
+            <h2>Dry Skin</h2>
+            <p>Rough complexion, red patches, feels like it "pulls", visible lines.</p>
+        </div>
+
+        <div class="skin-type">
+            <img src="assets/oily.jpg" alt="Oily Skin">
+            <h2>Oily Skin</h2>
+            <p>Visible pores, shiny complexion, pimples, blackheads, and imperfections.</p>
+        </div>
+
+        <div class="skin-type">
+            <img src="assets/combination.jpg" alt="Combination Skin">
+            <h2>Combination Skin</h2>
+            <p>Oily in the T-zone (nose, forehead, chin), normal to dry cheeks.</p>
+        </div>
+
+        <div class="skin-type">
+            <img src="sensitive-skin.jpg" alt="Sensitive Skin">
+            <h2>Sensitive Skin</h2>
+            <p>Redness, itching, burning, dryness.</p>
+        </div>
+    </div> -->
+    
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo1.png" alt="Footer Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="routines.html">Skincare Quiz</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="review.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><img id="facebook" src="assets/facebook2.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="assets/insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+        </br>
+        <p align ="center"><b>&copy; 2025 Your Skincare. All rights reserved.</b></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
