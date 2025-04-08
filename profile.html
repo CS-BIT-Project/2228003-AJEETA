@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile – EtherealGlow</title>
+  <link rel="stylesheet" href="home_page.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    .profile-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .profile-container img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .profile-container h2 {
+      margin-bottom: 10px;
+    }
+
+    .profile-container p {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    #logout {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff4b5c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    #logout:hover {
+      background-color: #e03a4a;
+    }
+
+    #not-logged-in {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container" id="profile-container" style="display: none;">
+    <img src="https://i.imgur.com/4Zz6XG8.png" alt="Profile" id="profile-photo" />
+    <h2 id="username">User Name</h2>
+    <p><strong>Email:</strong> <span id="email">example@email.com</span></p>
+    <button id="logout">Logout</button>
+  </div>
+
+  <div id="not-logged-in" style="display: none;">
+    <p>You are not logged in. <a href="login.html">Login here</a></p>
+  </div>
+
+  <!-- Firebase Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import {
+      getAuth,
+      onAuthStateChanged,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA7WOpOsEjTpXWai6snLoP5QwLkFxbsXFU",
+      authDomain: "ethrealglow-2874b.firebaseapp.com",
+      projectId: "ethrealglow-2874b",
+      storageBucket: "ethrealglow-2874b.appspot.com",
+      messagingSenderId: "48393647573",
+      appId: "1:48393647573:web:ddecf7fdbf2a1a882db95c",
+      measurementId: "G-7S7YN48Z2J"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const profileContainer = document.getElementById("profile-container");
+    const notLoggedIn = document.getElementById("not-logged-in");
+    const profilePhoto = document.getElementById("profile-photo");
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const logoutBtn = document.getElementById("logout");
+
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is logged in
+        profileContainer.style.display = "block";
+        notLoggedIn.style.display = "none";
+
+        username.textContent = user.displayName || "No Name";
+        email.textContent = user.email || "No Email";
+        if (user.photoURL) {
+          profilePhoto.src = user.photoURL;
+        }
+      } else {
+        // Not logged in
+        profileContainer.style.display = "none";
+        notLoggedIn.style.display = "block";
+      }
+    });
+
+    logoutBtn.addEventListener("click", async () => {
+      try {
+        await signOut(auth);
+        window.location.href = "index.html"; // Redirect after logout
+      } catch (err) {
+        console.error("Logout failed", err);
+        alert("Logout failed.");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body{
+    background-color: #c6f4df;
+    
+}
+    header {
+    background-color: #ecf2f3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #8ACDD7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #8ACDD7;
+}
+.logo img {
+    max-height: 50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav li {
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "times new roman";
+    transition: color 0.3s ease;
+    transition: border 0.3s ease;
+}
+nav a:hover {
+    color: #8E7AB5;
+    border: 2px solid #8E7AB5;
+}
+.contact-section {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "times new roman";
+    font-weight: 400;
+    font-style: normal;
+}
+.contact-info {
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #8ACDD7;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.map-container {
+    margin-bottom: 20px;
+}
+.faq-section {
+    margin-top: 40px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #4CAF50;
+}
+.footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+    height:50px;
+}
+.footer-content {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100px;
+}
+
+.footer-logo img {
+    max-height: 40px;
+}
+
+.footer-links ul {
+    background-color: #333;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    background-color: #333;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    background-color: #333;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-social a {
+    background-color: #333;
+    margin-right: 10px;
+}
+.footer-social img{
+    height:40px;
+    width:40px;
+}
+#facebook{
+    height:40px;
+    width:50px;
+}
+
+.footer p {
+    background-color: #333;
+    margin-top: 100px;
+    font-size: 14px;
+}
+/* .map-container{
+    height: 50px;
+    width: 50px;
+} */
